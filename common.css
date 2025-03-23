@@ -1,0 +1,607 @@
+/*网页宽度*/
+.w {
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+/*主体宽度*/
+.w_body {
+  width: 87%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/*隐藏类*/
+.hidden {
+  display: none;
+}
+
+/*加粗文字*/
+.bolder {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/*导航栏开始*/
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  height: 90px;
+  width: 100%;
+  z-index: 2;
+  background-color: white;
+}
+
+.nav_left {
+  display: flex;
+}
+
+.nav img {
+  width: 190px;
+  margin-left: 5%;
+  margin-right: 10%;
+  cursor: pointer;
+}
+
+.nav_menu {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.nav_menu li {
+  margin-right: 10%;
+}
+
+.nav_menu li:hover {
+  color: rgb(64, 73, 186);
+}
+
+.nav_menu li:nth-child(3) {
+  color: red;
+}
+
+.nav_right {
+  height: 50px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.nav_search {
+  display: flex;
+  align-items: center;
+  background-color: #f5f4f5;
+  height: 45px;
+  width: 200px;
+  padding-left: 1%;
+  border-radius: 20px;
+  margin-right: 13%;
+  cursor: pointer;
+}
+
+.nav_search input {
+  display: flex;
+  align-items: center;
+  background-color: #f5f4f5;
+  height: 45px;
+  width: 100px;
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.nav_func {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15%;
+  margin-left: 8%;
+  width: 30%;
+}
+
+.nav_func li:nth-child(even) {
+  font-size: 15px;
+  margin-left: 5px;
+  margin-right: 15px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.nav_func li:nth-child(1) {
+  margin-left: 10px;
+}
+
+.nav_position {
+  width: 100%;
+  height: 90px;
+}
+
+/*搜索模块开始*/
+.search {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1002;
+}
+
+.search_body {
+  width: 100%;
+  height: 290px;
+  background-color: white;
+}
+
+.search_width {
+  position: relative;
+  height: 100%;
+  width: 170vh;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.search_input {
+  position: absolute;
+  top: 7%;
+  left: 13vw;
+  display: flex;
+  align-items: center;
+  background-color: #f5f4f5;
+  height: 60px;
+  width: 68%;
+  padding-left: 18px;
+  border-radius: 65px;
+  cursor: pointer;
+}
+
+.search_input span {
+  margin-right: 7px;
+}
+
+.search_input input {
+  background-color: #f5f4f5;
+  height: 100%;
+  width: 80%;
+  font-size: 16px;
+  color: black;
+}
+
+.search_body .cancel {
+  position: absolute;
+  top: 13%;
+  right: 4vw;
+  margin-left: 3vw;
+  margin-right: 10%;
+  font-size: 16px;
+  color: #1b2a34;
+  cursor: pointer;
+}
+
+.search_body p {
+  position: absolute;
+  top: 36%;
+  left: 13%;
+  font-size: 15px;
+}
+
+.return {
+  position: absolute;
+  top: 290px;
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+}
+
+.search_menu {
+  position: absolute;
+  top: 55%;
+  left: 10%;
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  width: 75%;
+}
+
+.search_menu li {
+  position: relative;
+  background-color: #f5f4f5;
+  padding: 8px 16px;
+  font-size: 13px;
+  width: 98px;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.search_menu .hot::after {
+  display: block;
+  position: absolute;
+  top: -5px;
+  right: 2%;
+  content: "";
+  height: 20px;
+  width: 30px;
+  background-image: url("resources/img/index/hot.png");
+  background-size: cover;
+}
+
+/*门店拓展模块*/
+.store {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 70px;
+  right: -3%;
+  float: right;
+  margin-right: 15%;
+  width: 19%;
+  height: 200px;
+  background-color: rgb(247, 248, 249);
+  border-top: 2px solid rgb(60, 68, 185);
+  box-shadow: -1px 0 1px -1px rgba(0, 0, 0, 0.3),
+    1px 0 1px -1px rgba(0, 0, 0, 0.3), 0 1px 1px 1px rgba(0, 0, 0, 0.3);
+  z-index: 3;
+}
+.store img {
+  margin-top: 20px;
+  width: 45%;
+}
+
+.store p {
+  margin-top: 9px;
+  font-size: 14px;
+}
+
+/*大轮播图部分*/
+.big_carousel {
+  position: relative;
+  height: 40vw;
+  /*  max-height: 720px; */
+  overflow: hidden;
+}
+
+.big_carousel_container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  transform: translateX(-100%);
+  transition: all 0.3s;
+}
+
+.big_carousel_img {
+  flex: 0 0 100%;
+  height: 100%;
+}
+.big_carousel_container .big_carousel_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.big_carousel_indicator {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 33px;
+  width: 420px;
+  height: 1.5px;
+  display: flex;
+  background-color: rgba(169, 167, 171, 0.4);
+}
+
+.big_carousel_indicator span {
+  width: 70px;
+  height: 100%;
+}
+
+.active {
+  background-color: white;
+}
+
+.prev {
+  width: 5vh;
+  height: 5vh;
+  line-height: 5vh;
+  text-align: center;
+  background-color: #f5f4f5;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.next {
+  width: 5vh;
+  height: 5vh;
+  line-height: 5vh;
+  text-align: center;
+  background-color: #f5f4f5;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.big_carousel .prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1.5%;
+}
+
+.big_carousel .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1.5%;
+}
+
+.big_carousel .prev:hover,
+.big_carousel .next:hover {
+  background-color: rgb(237, 235, 249);
+  transition: all 0.3s;
+}
+
+.checkbox {
+  position: absolute;
+  display: flex;
+  justify-content: left;
+  gap: 13.8%;
+  top: 58.5%;
+  height: 65px;
+  width: 600%;
+  margin-left: 6%;
+}
+
+.check {
+  height: 5vw;
+  width: 17vw;
+  line-height: 5vw;
+  text-align: center;
+  font-size: 1.5vw;
+  color: white;
+  background-color: rgb(59, 68, 184);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.check:hover {
+  background-color: rgb(53, 57, 146);
+  transition: all 0.3s;
+}
+
+.check:nth-child(6) {
+  background-color: white;
+  color: rgb(59, 68, 184);
+}
+
+/*乐享运动模块*/
+.happy_sport {
+  position: relative;
+  display: flex;
+  height: 50vw;
+  background-color: white;
+}
+
+.hs_title {
+  position: absolute;
+  top: 9vw;
+  font-size: 2vw;
+  font-weight: 500;
+}
+
+.hs_menu {
+  position: absolute;
+  top: 17vw;
+  height: 20vw;
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+  flex-wrap: wrap;
+}
+
+.hs_menu li {
+  position: relative;
+  height: 5vw;
+  width: 20vw;
+  color: black;
+  font-size: 1vw;
+  line-height: 5vw;
+  text-align: center;
+  overflow: visible;
+  cursor: pointer;
+}
+
+.hs_menu li img {
+  position: absolute;
+  top: -30px;
+  left: 20px;
+  width: 8vw;
+  transition: all 0.3s;
+  z-index: 1;
+}
+
+.hs_menu li span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-left: 6vw;
+  background-color: rgb(247, 248, 249);
+  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+}
+
+.hs_menu li:nth-child(12) {
+  background-color: rgb(247, 248, 249);
+  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+}
+
+.hs_menu li:nth-child(12):hover {
+  background-color: rgb(59, 68, 184);
+  color: white;
+  transition: all 0.3s;
+}
+
+/*关于迪卡侬模块*/
+.about_decathlon {
+  height: 37vw;
+  background-color: white;
+}
+
+.about_img {
+  margin-top: 50px;
+  display: flex;
+  height: 20vw;
+  gap: 2vw;
+}
+
+.about_img img {
+  height: 100%;
+}
+
+/*当季品类模块*/
+.season {
+  position: relative;
+  height: 70vw;
+  background-color: #f5f4f5;
+}
+
+.season_menu {
+  position: absolute;
+  top: 3%;
+  right: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3vw;
+  cursor: pointer;
+}
+
+.season_menu li {
+  font-size: 16px;
+  padding: 0.5vw 0;
+}
+
+.season_menu li:hover {
+  color: rgb(59, 68, 184);
+  border-bottom: 2px solid rgb(59, 68, 184);
+}
+
+.season img {
+  position: absolute;
+  top: 14%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.season img:hover {
+  transform: scale(1.05);
+  transition: all 0.5s;
+}
+
+/*80%*/
+@media (min-width: 1700px) {
+  h1 {
+    font-size: 33px;
+  }
+
+  .prev,
+  .next {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+  }
+
+  .big_carousel {
+    height: 720px;
+  }
+  .check {
+    height: 75px;
+    width: 250px;
+    line-height: 75px;
+    font-size: 25px;
+  }
+
+  .happy_sport {
+    position: relative;
+    display: flex;
+    height: 800px;
+    background-color: white;
+  }
+
+  .hs_title {
+    top: 130px;
+    font-size: 32px;
+  }
+
+  .hs_menu {
+    top: 260px;
+    height: 400px;
+    width: 1400px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hs_menu li {
+    height: 75px;
+    width: 300px;
+    font-size: 16px;
+    line-height: 75px;
+  }
+
+  .hs_menu li img {
+    width: 110px;
+  }
+
+  .hs_menu li span {
+    padding-left: 100px;
+  }
+
+  .about_decathlon {
+    height: 580px;
+  }
+  .about_img {
+    height: 350px;
+    gap: 25px;
+  }
+
+  .season {
+    height: 800px;
+  }
+
+  .season_menu {
+    position: absolute;
+    top: 20px;
+    right: 200px;
+    gap: 50px;
+  }
+}
+
+/*125%缩放*/
+@media (max-width: 1300px) {
+  .nav_search {
+    background-color: transparent;
+    width: 5vw;
+  }
+  .nav_search input {
+    display: none;
+  }
+  .nav_func {
+    margin-right: 30%;
+  }
+}
+
+/*150%缩放*/
+@media (max-width: 1000px) {
+  .nav_func li:nth-child(even) {
+    display: none;
+  }
+
+  .nav_func li:nth-child(odd) {
+    margin-right: 20px;
+  }
+}
