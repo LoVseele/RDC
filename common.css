@@ -3,6 +3,7 @@
   width: 100%;
   max-width: 1800px;
   margin: 0 auto;
+  position: relative;
 }
 
 /*主体宽度*/
@@ -17,10 +18,27 @@
   display: none;
 }
 
+/*显示类*/
+.visible {
+  display: visible;
+}
+
 /*加粗文字*/
 .bolder {
   font-weight: bold;
   letter-spacing: 2px;
+}
+
+/*按钮变色*/
+.button_hover {
+  background-color: rgb(237, 235, 249) !important;
+}
+
+/*品牌名*/
+.name {
+  font-size: 1vw;
+  font-weight: bold;
+  color: #6a7888;
 }
 
 /*导航栏开始*/
@@ -40,22 +58,25 @@
 }
 
 .nav img {
-  width: 190px;
+  width: 185px;
+  object-fit: contain;
   margin-left: 5%;
-  margin-right: 10%;
+  margin-right: 6%;
   cursor: pointer;
 }
 
 .nav_menu {
+  position: relative;
   display: flex;
   align-items: center;
+  gap: 2vw;
   font-size: 15px;
+  padding: 1vw 0;
   white-space: nowrap;
-  cursor: pointer;
 }
 
 .nav_menu li {
-  margin-right: 10%;
+  cursor: pointer;
 }
 
 .nav_menu li:hover {
@@ -64,6 +85,18 @@
 
 .nav_menu li:nth-child(3) {
   color: red;
+}
+
+.underline {
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  width: 15%;
+  height: 3px;
+  border-radius: 10px;
+  background-color: rgb(59, 68, 184);
+  transition: all 0.3s;
+  display: none;
 }
 
 .nav_right {
@@ -116,6 +149,10 @@
   margin-left: 10px;
 }
 
+.nav_func .icon-gouwuche {
+  font-size: 20px;
+}
+
 .nav_position {
   width: 100%;
   height: 90px;
@@ -148,7 +185,7 @@
 .search_input {
   position: absolute;
   top: 7%;
-  left: 13vw;
+  left: 13%;
   display: flex;
   align-items: center;
   background-color: #f5f4f5;
@@ -156,7 +193,6 @@
   width: 68%;
   padding-left: 18px;
   border-radius: 65px;
-  cursor: pointer;
 }
 
 .search_input span {
@@ -169,6 +205,7 @@
   width: 80%;
   font-size: 16px;
   color: black;
+  cursor: text;
 }
 
 .search_body .cancel {
@@ -264,7 +301,6 @@
 .big_carousel {
   position: relative;
   height: 40vw;
-  /*  max-height: 720px; */
   overflow: hidden;
 }
 
@@ -310,9 +346,12 @@
   height: 5vh;
   line-height: 5vh;
   text-align: center;
-  background-color: #f5f4f5;
+  background-color: white;
   border-radius: 40px;
   cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: -1px 1px 1px 1px rgba(169, 167, 171, 0.1),
+    -1px -1px 1px 1px rgba(169, 167, 171, 0.1);
 }
 
 .next {
@@ -320,9 +359,12 @@
   height: 5vh;
   line-height: 5vh;
   text-align: center;
-  background-color: #f5f4f5;
+  background-color: white;
   border-radius: 40px;
   cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 1px -1px 1px 1px rgba(169, 167, 171, 0.1),
+    1px 1px 1px 1px rgba(169, 167, 171, 0.1);
 }
 
 .big_carousel .prev {
@@ -381,7 +423,6 @@
 /*乐享运动模块*/
 .happy_sport {
   position: relative;
-  display: flex;
   height: 50vw;
   background-color: white;
 }
@@ -396,6 +437,7 @@
 .hs_menu {
   position: absolute;
   top: 17vw;
+  left: -2vw;
   height: 20vw;
   width: 90vw;
   display: flex;
@@ -458,6 +500,16 @@
   gap: 2vw;
 }
 
+.about_img li {
+  height: 100%;
+  width: 20vw;
+  overflow: hidden;
+}
+
+.about_img li:nth-child(1) {
+  width: 44vw;
+}
+
 .about_img img {
   height: 100%;
 }
@@ -465,8 +517,8 @@
 /*当季品类模块*/
 .season {
   position: relative;
-  height: 70vw;
-  background-color: #f5f4f5;
+  height: 55vw;
+  overflow: hidden;
 }
 
 .season_menu {
@@ -477,12 +529,12 @@
   justify-content: center;
   align-items: center;
   gap: 3vw;
-  cursor: pointer;
 }
 
 .season_menu li {
-  font-size: 16px;
+  font-size: 1vw;
   padding: 0.5vw 0;
+  cursor: pointer;
 }
 
 .season_menu li:hover {
@@ -490,24 +542,782 @@
   border-bottom: 2px solid rgb(59, 68, 184);
 }
 
-.season img {
+.season_bigimg {
   position: absolute;
-  top: 14%;
-  width: 100%;
-  margin: 0 auto;
+  top: 10%;
+  height: 27vw;
+  overflow: hidden;
 }
 
-.season img:hover {
+.season_bigimg img {
+  width: 100%;
+}
+
+.season h2 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.3vw;
+  color: white;
+  font-weight: 400;
+}
+
+.check_more {
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12.5vw;
+  height: 3.7vw;
+  line-height: 3.7vw;
+  text-align: center;
+  color: white;
+  font-size: 1.2vw;
+  background-color: rgb(59, 68, 184);
+  border-radius: 50px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.check_more:hover {
+  background-color: rgb(53, 57, 146);
+}
+
+.season_carousel {
+  position: absolute;
+  top: 41%;
+  left: 7%;
+  height: 23vw;
+  overflow: hidden;
+  padding-left: 5px;
+}
+
+.season_carousel_container {
+  transform: translateX(0%);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 1.8vw;
+  transition: all 0.3s;
+}
+
+.season_product {
+  position: relative;
+  width: 15.6vw;
+  height: 100%;
+  cursor: pointer;
+}
+
+.season_product:hover {
   transform: scale(1.05);
+  transition: all 0.3s;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.season_carousel img {
+  height: 15.6vw;
+  cursor: pointer;
+}
+
+.season_product p {
+  font-size: 1vw;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.season_product h3 {
+  margin-left: 2.5%;
+  margin-top: 6%;
+  font-size: 1.4vw;
+  cursor: pointer;
+}
+
+.season_product h3 span {
+  font-size: 1vw;
+  cursor: pointer;
+}
+
+.season_product div {
+  position: absolute;
+  right: 1vw;
+  bottom: 5%;
+  width: 2.9vw;
+  height: 2.9vw;
+  line-height: 2.9vw;
+  text-align: center;
+  transition: all 0.3s;
+  background-color: rgb(59, 68, 184);
+  cursor: pointer;
+}
+
+.season_product div:hover {
+  background-color: rgb(53, 57, 146);
+}
+
+.season_product .icon-gouwuche {
+  font-size: 1.6vw;
+  color: white;
+  font-weight: bold;
+}
+
+.season .prev {
+  position: absolute;
+  bottom: 35%;
+  left: 5.5%;
+  color: rgb(186, 193, 200);
+  cursor: not-allowed;
+}
+
+.season .next {
+  position: absolute;
+  bottom: 35%;
+  right: 5%;
+}
+
+/*侬说搭配模块*/
+.lon_say {
+  position: relative;
+  height: 45vw;
+}
+
+.ls_bigimg_container {
+  position: absolute;
+  width: 68%;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  background-color: aqua;
+}
+
+.ls_bigimg {
+  width: 100%;
+}
+
+.ls_menu {
+  position: absolute;
+  top: 11.5%;
+  display: flex;
+  gap: 15%;
+  width: 25%;
+  font-size: 1vw;
+  color: rgb(97, 97, 97);
+}
+
+.ls_menu li:hover {
+  color: rgb(59, 68, 184);
+  cursor: pointer;
+}
+
+.ls_littleTitle {
+  position: absolute;
+  top: 19%;
+  font-size: 2vw;
+}
+
+.ls_carousel {
+  position: absolute;
+  top: 38%;
+  width: 57%;
+  height: 50%;
+  overflow: hidden;
+}
+
+.ls_carousel_container {
+  transform: translate(0%);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 3.8%;
+  transition: all 0.3s;
+}
+
+.ls_carousel_product {
+  position: relative;
+  width: 35%;
+  height: 100%;
+  background-color: rgb(245, 244, 245);
+  cursor: pointer;
+}
+
+.ls_carousel_product:hover {
+  transition: all 0.3s;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.ls_carousel_product img {
+  height: 67%;
+  cursor: pointer;
+}
+
+.lon_say .prev {
+  position: absolute;
+  bottom: 35%;
+  left: -1.5%;
+  color: rgb(186, 193, 200);
+  cursor: not-allowed;
+}
+
+.lon_say .next {
+  position: absolute;
+  bottom: 35%;
+  right: 41.5%;
+}
+
+.ls_carousel_product p {
+  padding: 0 10px;
+  font-size: 1.1vw;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.ls_carousel_product h3 {
+  margin-left: 2.5%;
+  margin-top: 10%;
+  font-size: 1.4vw;
+  cursor: pointer;
+}
+
+.ls_carousel_product h3 span {
+  font-size: 1vw;
+  cursor: pointer;
+}
+
+.ls_carousel_product div {
+  position: absolute;
+  right: 5%;
+  bottom: 3%;
+  width: 20%;
+  height: 3vw;
+  line-height: 3vw;
+  text-align: center;
+  transition: all 0.3s;
+  background-color: rgb(59, 68, 184);
+  cursor: pointer;
+}
+
+.ls_carousel_product div:hover {
+  background-color: rgb(53, 57, 146);
+}
+
+.ls_carousel_product .icon-gouwuche {
+  font-size: 1.6vw;
+  font-weight: bold;
+  color: white;
+}
+
+/*侬粉热搜*/
+.fan_hot {
+  position: relative;
+  margin-top: 4%;
+  height: 20vw;
+  background-color: #f5f4f5;
+}
+
+.fan_hot h1 {
+  position: absolute;
+  top: 0;
+  left: 3.5%;
+  width: 15%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fh_menu_1 {
+  position: absolute;
+  top: 18%;
+  left: 24%;
+  width: 65%;
+  height: 30%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 5%;
+}
+
+.fh_menu_2 {
+  position: absolute;
+  bottom: 18%;
+  left: 20%;
+  width: 65%;
+  height: 30%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 5%;
+}
+
+.fan_hot li {
+  position: relative;
+  width: 13.5%;
+  height: 65%;
+  font-size: 1.1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.fan_hot li:hover {
+  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.15);
+}
+
+.fan_hot .hot::after {
+  display: block;
+  position: absolute;
+  top: -0.7vw;
+  right: -0.7vw;
+  content: "";
+  height: 1.5vw;
+  width: 2vw;
+  background-image: url("resources/img/index/hot.png");
+  background-size: cover;
+}
+
+/*折扣专区模块*/
+.discount {
+  margin-top: 12vw;
+  height: 40vw;
+}
+
+.discount_bigimg {
+  margin-top: 5%;
+  height: 24vw;
+  overflow: hidden;
+}
+
+.discount img {
+  width: 100%;
+}
+
+/*迪家创新模块*/
+.innovation {
+  position: relative;
+  height: 40vw;
+}
+
+.innovation h1 {
+  font-size: 2.8vw;
+}
+
+.inv_carousel {
+  margin-top: 3%;
+  height: 52%;
+  overflow: hidden;
+}
+
+.inv_carousel_container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 1.7%;
   transition: all 0.5s;
+  transform: translateX(-51%);
+}
+
+.inv_carousel_img {
+  flex: 0 0 49.2%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.inv_carousel_img img {
+  height: 100%;
+}
+
+.innovation .prev {
+  position: absolute;
+  top: 40%;
+  left: -1.5%;
+}
+
+.innovation .next {
+  position: absolute;
+  top: 40%;
+  right: -1.5%;
+}
+
+.service {
+  height: 17vw;
+  background-color: #f5f4f5;
+}
+
+.service ul {
+  width: 100%;
+  height: 100%;
+  padding: 3% 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+
+.service li {
+  position: relative;
+  width: 20%;
+  height: 100%;
+  padding: 1.5% 2.5%;
+  transition: all 0.3s;
+}
+
+.service li img {
+  width: 37%;
+}
+
+.service h3 {
+  position: absolute;
+  bottom: 23%;
+  font-size: 1.2vw;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.service li:nth-child(n + 3) h3 {
+  font-size: 0.9vw;
+}
+
+.service span {
+  font-size: 1.5vw;
+  font-weight: 700;
+}
+
+.service li:nth-child(1) span,
+.service li:nth-child(2) span {
+  font-size: 2vw;
+}
+
+.service p {
+  position: absolute;
+  bottom: 0;
+  font-size: 0.9vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6a7888;
+}
+
+.recommend {
+  margin-top: 10vw;
+  height: 70vw;
+}
+
+.recommend_menu {
+  margin-top: 5%;
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 5% 1.5%;
+}
+
+.recommend_menu li {
+  position: relative;
+  width: 18.8%;
+  height: 55%;
+  padding: 0.5% 0.5%;
+}
+
+.recommend_menu li:hover {
+  border: 1px solid #f5f4f5;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.recommend_menu li img {
+  width: 100%;
+}
+
+.recommend_menu li p {
+  position: absolute;
+  top: 72%;
+  font-size: 1.1vw;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.recommend_menu li h3 {
+  position: absolute;
+  bottom: 2%;
+  font-size: 1.4vw;
+  cursor: pointer;
+}
+
+.recommend_menu li h3 span {
+  font-size: 1vw;
+  cursor: pointer;
+}
+
+.special_offer {
+  position: absolute;
+  top: 2%;
+  left: 3%;
+  padding: 0.5% 1.5%;
+  background-color: red;
+  color: white;
+  font-size: 0.8vw;
+}
+
+.special_price {
+  display: inline;
+  font-size: 0.9vw;
+  color: #686868;
+  text-decoration: line-through;
+}
+
+.hot_product {
+  position: absolute;
+  top: 2%;
+  left: 3%;
+  padding: 0.5% 1.5%;
+  background-color: #0082c3;
+  color: white;
+  font-size: 0.8vw;
+}
+
+.special_discount {
+  position: absolute;
+  bottom: 8%;
+  left: 35%;
+  padding: 0.2% 1%;
+  background-color: #ffcd4e;
+  color: black;
+  font-size: 0.7vw;
+  font-weight: 600;
+}
+
+/*产品召回模块*/
+.product_return {
+  margin-top: -7vw;
+  position: relative;
+  height: 10vw;
+}
+
+.product_return p {
+  width: 96%;
+  position: absolute;
+  bottom: 0;
+  font-size: 1vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-bottom: 2%;
+  border-bottom: 1px solid #eff1f3;
+  cursor: pointer;
+}
+
+.product_return p span {
+  font-weight: bold;
+}
+
+.product_return div {
+  position: absolute;
+  bottom: 13%;
+  right: 0;
+}
+
+/*会员权益头部*/
+.member_header {
+  position: relative;
+  height: 30vw;
+}
+
+.member_header img {
+  width: 100%;
+}
+
+.member_header h1 {
+  position: absolute;
+  top: 24%;
+  left: 5%;
+  font-size: 2.8vw;
+}
+
+.member_header p {
+  position: absolute;
+  top: 55%;
+  left: 5%;
+  font-size: 1.1vw;
+  width: 58%;
+  color: #1a2a34;
+}
+
+.member_header_joinBox {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  width: 24%;
+  height: 20%;
+  border: 2px solid #3643ba;
+  display: flex;
+  background-color: white;
+}
+
+.joinBox_bottom {
+  position: absolute;
+  bottom: 9%;
+  left: 5.5%;
+  width: 24%;
+  height: 20%;
+  border: 2px solid #3643ba;
+  background-color: white;
+}
+
+.member_header_joinBox div {
+  height: 100%;
+  font-size: 1.4vw;
+}
+
+.member_header_joinBox div:nth-child(1) {
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3643ba;
+}
+
+.member_header_joinBox div:nth-child(2) {
+  width: 25%;
+  padding: 3% 5%;
+  text-align: center;
+  background-color: #3643ba;
+  color: white;
+}
+
+/*加入迪卡侬浮块*/
+.join_decathlon {
+  position: fixed;
+  z-index: 11111;
+  top: 30%;
+  left: calc(50% - 49.5vw);
+  padding: 0.8vw 0.5vw;
+  text-align: center;
+  writing-mode: vertical-rl;
+  letter-spacing: 0.3vw;
+  color: white;
+  font-size: 1vw;
+  background-color: #3643ba;
+}
+
+/*底部模块*/
+.footer {
+  margin-top: 10vw;
+  height: 30vw;
+  background-color: #3643ba;
+}
+
+.footer .w_body {
+  position: relative;
+  height: 100%;
+}
+
+.footer img {
+  position: absolute;
+  top: 10%;
+  width: 18%;
+}
+
+.footer p {
+  position: absolute;
+  bottom: 7%;
+  color: #aaafb9;
+}
+
+.footer_menubox {
+  position: absolute;
+  top: 30%;
+  height: 52%;
+  width: 100%;
+  display: flex;
+  gap: 2%;
+  border-bottom: 1px solid #5e69c8;
+}
+
+.footer_menu {
+  width: 15%;
+}
+
+.footer_menu li {
+  margin-bottom: 6%;
+  font-size: 0.8vw;
+  cursor: pointer;
+  color: #cfcfdb;
+}
+
+.footer_menu li:nth-child(1) {
+  margin-bottom: 10%;
+  color: white;
+}
+
+.wechat_gzh,
+.wechat_xcx {
+  position: absolute;
+  right: 10%;
+  width: 8%;
+  height: 45%;
+  font-size: 0.8vw;
+}
+
+.wechat_xcx {
+  right: 0;
+}
+
+.wechat_gzh img,
+.wechat_xcx img {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+}
+
+.wechat_xcx img {
+  border-radius: 50px;
+}
+
+.wechat_gzh p,
+.wechat_xcx p {
+  position: absolute;
+  bottom: 0;
+  left: 4%;
+  color: white;
+}
+
+.media {
+  position: absolute;
+  right: 0;
+  bottom: 30%;
+  font-size: 2vw;
+  color: white;
+  cursor: pointer;
+}
+
+.filing {
+  position: absolute;
+  right: 0;
+  bottom: 7%;
+  width: 29.9%;
+  color: #aaafb9;
+  cursor: pointer;
+}
+
+.filing span {
+  margin-right: 2%;
 }
 
 /*80%*/
 @media (min-width: 1700px) {
-  h1 {
-    font-size: 33px;
+  .nav_menu {
+    gap: 36px;
+    padding: 16px 0;
   }
 
+  h1 {
+    font-size: 38px;
+  }
+  .name {
+    font-size: 18px;
+  }
   .prev,
   .next {
     width: 55px;
@@ -526,10 +1336,7 @@
   }
 
   .happy_sport {
-    position: relative;
-    display: flex;
     height: 800px;
-    background-color: white;
   }
 
   .hs_title {
@@ -539,11 +1346,9 @@
 
   .hs_menu {
     top: 260px;
+    left: -36px;
     height: 400px;
     width: 1400px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
   }
 
   .hs_menu li {
@@ -570,7 +1375,7 @@
   }
 
   .season {
-    height: 800px;
+    height: 950px;
   }
 
   .season_menu {
@@ -578,6 +1383,222 @@
     top: 20px;
     right: 200px;
     gap: 50px;
+  }
+
+  .season_menu li {
+    font-size: 16px;
+  }
+
+  .season h2 {
+    font-size: 35px;
+  }
+
+  .check_more {
+    width: 240px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 20px;
+  }
+
+  .season_carousel {
+    top: 400px;
+    height: 435px;
+  }
+
+  .season_carousel_container {
+    gap: 35px;
+  }
+
+  .season_product {
+    width: 285px;
+    height: 100%;
+  }
+
+  .season_product img {
+    height: 285px;
+  }
+
+  .season_product p {
+    font-size: 18px;
+  }
+
+  .season_product h3 {
+    margin-top: 10px;
+    font-size: 25px;
+  }
+
+  .season_product h3 span {
+    font-size: 16px;
+  }
+
+  .season_product div {
+    right: 20px;
+    bottom: 40px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+  .season_product .icon-gouwuche {
+    font-size: 25px;
+  }
+  .season .prev {
+    bottom: 33%;
+  }
+
+  .season .next {
+    bottom: 33%;
+  }
+
+  .lon_say {
+    height: 850px;
+  }
+
+  .ls_menu {
+    font-size: 18px;
+  }
+
+  .ls_littleTitle {
+    font-size: 36px;
+  }
+
+  .ls_carousel {
+    height: 418px;
+  }
+
+  .ls_carousel_product p {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+
+  .ls_carousel_product h3 {
+    font-size: 25px;
+  }
+
+  .ls_carousel_product h3 span {
+    font-size: 16px;
+  }
+
+  .ls_carousel_product div {
+    height: 55px;
+    line-height: 55px;
+  }
+
+  .ls_carousel_product .icon-gouwuche {
+    font-size: 25px;
+  }
+
+  .fan_hot {
+    height: 400px;
+  }
+  .fan_hot li {
+    font-size: 20px;
+  }
+  .discount {
+    margin-top: 190px;
+    height: 800px;
+  }
+
+  .discount_bigimg {
+    margin-top: 5%;
+    height: 450px;
+  }
+
+  .innovation {
+    height: 800px;
+  }
+  .innovation h1 {
+    font-size: 45px;
+  }
+  .service {
+    height: 330px;
+  }
+  .service h3 {
+    font-size: 20px;
+  }
+
+  .service li:nth-child(n + 3) h3 {
+    font-size: 16px;
+  }
+
+  .service span {
+    font-size: 30px;
+  }
+
+  .service li:nth-child(1) span,
+  .service li:nth-child(2) span {
+    font-size: 40px;
+  }
+
+  .service p {
+    font-size: 16px;
+  }
+
+  .recommend {
+    margin-top: 180px;
+    height: 1300px;
+  }
+  .recommend_menu li p {
+    font-size: 18px;
+  }
+
+  .recommend_menu li h3 {
+    position: absolute;
+    bottom: 2%;
+    font-size: 25px;
+  }
+
+  .recommend_menu li h3 span {
+    font-size: 16px;
+  }
+
+  .special_offer,
+  .hot_product {
+    font-size: 14px;
+  }
+
+  .special_discount {
+    font-size: 12px;
+  }
+  .special_price {
+    display: inline;
+    font-size: 15px;
+  }
+
+  .product_return {
+    margin-top: -160px;
+    height: 180px;
+  }
+
+  .product_return p {
+    position: absolute;
+    bottom: 0;
+    font-size: 16px;
+  }
+
+  .join_decathlon {
+    padding: 14px 8px;
+    top: 300px;
+    left: calc(50% - 900px);
+    letter-spacing: 5px;
+    font-size: 16px;
+  }
+
+  .footer {
+    margin-top: 150px;
+    height: 540px;
+    background-color: #3643ba;
+  }
+  .wechat_gzh,
+  .wechat_xcx,
+  .footer_menu li {
+    font-size: 14px;
+  }
+  .wechat_xcx {
+    right: 0;
+  }
+
+  .media {
+    font-size: 30px;
   }
 }
 

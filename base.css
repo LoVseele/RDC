@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: default;
 }
 
 /* em 和 i 斜体的文字不倾斜 */
@@ -16,7 +17,7 @@ li {
 }
 
 h1 {
-  font-size: 2vw;
+  font-size: 2.2vw;
   font-weight: 400;
 }
 
