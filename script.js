@@ -28,6 +28,15 @@ function productOver(container, shopcar) {
       shopcar[s].classList.add("hidden");
     });
   });
+  shopcar.forEach((shopcar) => {
+    shopcar.addEventListener("mouseover", () => {
+      shopcar.style.backgroundColor = "rgb(53, 57, 146)";
+    });
+
+    shopcar.addEventListener("mouseleave", () => {
+      shopcar.style.backgroundColor = "rgb(59, 68, 184)";
+    });
+  });
 }
 
 //经过图片放大
@@ -132,6 +141,9 @@ const bigCarouselIndicator = document.querySelectorAll(
   ".big_carousel_indicator span"
 );
 
+//大轮播图立即查看按钮
+const checkBox = document.querySelector(".checkbox");
+
 //自动播放模块
 let timeID_Big = setInterval(() => {
   bigCarouselNext.click();
@@ -140,6 +152,8 @@ let timeID_Big = setInterval(() => {
 //大轮播图切换图片函数
 function MoveBigImg(i) {
   bigCarouselContainer.style.transform = `translateX(-${i}00%)`;
+  let move = 6 - i * 103.5;
+  checkBox.style.left = `${move}%`;
 }
 
 let i = 1;
@@ -153,11 +167,13 @@ bigCarouselPrev.addEventListener("click", () => {
     MoveBigImg(i);
   } else {
     bigCarouselContainer.style.transition = "none";
+    checkBox.style.transition = "none";
     MoveBigImg(7);
     bigCarouselIndicator[i - 1].classList.remove("active");
     i = 6;
     bigCarouselContainer.clientHeight; //强制渲染
     bigCarouselContainer.style.transition = "all 0.5s";
+    checkBox.style.transition = "all 0.5s";
     bigCarouselIndicator[i - 1].classList.add("active");
     MoveBigImg(i);
   }
@@ -176,11 +192,13 @@ bigCarouselNext.addEventListener("click", () => {
     MoveBigImg(i);
   } else {
     bigCarouselContainer.style.transition = "none";
+    checkBox.style.transition = "none";
     bigCarouselIndicator[i - 1].classList.remove("active");
     MoveBigImg(0);
     i = 1;
     bigCarouselContainer.clientHeight; //强制渲染
     bigCarouselContainer.style.transition = "all 0.5s";
+    checkBox.style.transition = "all 0.5s";
     bigCarouselIndicator[i - 1].classList.add("active");
     MoveBigImg(i);
   }
@@ -197,7 +215,6 @@ const hsSelect = document.querySelectorAll(".hs_menu li");
 
 //乐享运动模块图片
 const hsImg = document.querySelectorAll(".hs_menu li img");
-
 //乐享运动图片移动
 hsSelect.forEach((select, hs) => {
   select.addEventListener("mouseover", () => {
@@ -207,6 +224,7 @@ hsSelect.forEach((select, hs) => {
     hsImg[hs].style.left = "20px";
   });
 });
+
 //乐享运动模块结束
 
 //关于迪卡侬模块开始
@@ -393,7 +411,15 @@ serviceType.forEach((p) => {
   });
 });
 
+//热卖推荐模块
+const recommendProduct = document.querySelectorAll(".recommend_menu li");
+const recommendShopcar = document.querySelectorAll(
+  ".recommend_menu .icon-gouwuche"
+);
+productOver(recommendProduct, recommendShopcar);
+
 //跳转界面
+//主界面
 const bigCarousel = document.querySelector(".big_carousel");
 const happySport = document.querySelector(".happy_sport");
 const aboutDecathlon = document.querySelector(".about_decathlon");
@@ -406,10 +432,17 @@ const service = document.querySelector(".service");
 const recommend = document.querySelector(".recommend");
 const productReturn = document.querySelector(".product_return");
 
+//会员权益界面
+const memberHeader = document.querySelector(".member_header");
+const joinDecathlon = document.querySelector(".join_decathlon");
+const memberBenefit = document.querySelector(".member_benefit");
+const specialPlace = document.querySelector(".special_place");
+const strategy = document.querySelector(".strategy");
+
+//点击会员权益切换
 navMenu[4].addEventListener("click", () => {
   bigCarousel.classList.add("hidden");
   happySport.classList.add("hidden");
-  console.log(happySport);
   aboutDecathlon.classList.add("hidden");
   season.classList.add("hidden");
   lonSay.classList.add("hidden");
@@ -419,6 +452,11 @@ navMenu[4].addEventListener("click", () => {
   service.classList.add("hidden");
   recommend.classList.add("hidden");
   productReturn.classList.add("hidden");
+  memberHeader.classList.remove("hidden");
+  joinDecathlon.classList.remove("hidden");
+  memberBenefit.classList.remove("hidden");
+  specialPlace.classList.remove("hidden");
+  strategy.classList.remove("hidden");
 });
 
 logo.addEventListener("click", () => {
@@ -433,4 +471,110 @@ logo.addEventListener("click", () => {
   service.classList.remove("hidden");
   recommend.classList.remove("hidden");
   productReturn.classList.remove("hidden");
+  memberHeader.classList.add("hidden");
+  joinDecathlon.classList.add("hidden");
+  memberBenefit.classList.add("hidden");
+  specialPlace.classList.add("hidden");
+  strategy.classList.add("hidden");
+});
+
+//会员福利模块
+//背景色
+const gradientOverlay = document.querySelectorAll(".gradient_overlay");
+
+//每个小框
+const memberBenefitSelect = document.querySelectorAll(
+  ".member_benefit_textbox"
+);
+
+//小框内文本
+const memberBenefitText = document.querySelectorAll(
+  ".member_benefit_textbox h3"
+);
+
+//工作室按钮
+const workroom = document.querySelector(".workroom");
+
+//立即加入按钮
+const joinNow = document.querySelector(
+  ".member_benefit_bottom div:nth-child(1)"
+);
+
+//迪卡侬会员须知按钮
+const memberKnow = document.querySelector(
+  ".member_benefit_bottom div:nth-child(2)"
+);
+
+//移动文本
+memberBenefitSelect.forEach((select, s) => {
+  select.addEventListener("mouseover", () => {
+    memberBenefitText[s].style.marginTop = "7%";
+    gradientOverlay[s].style.opacity = "1";
+  });
+  select.addEventListener("mouseleave", () => {
+    memberBenefitText[s].style.marginTop = "45%";
+    gradientOverlay[s].style.opacity = "0";
+  });
+});
+
+//鼠标经过按钮变色
+workroom.addEventListener("mouseover", () => {
+  workroom.style.backgroundColor = "#3643ba";
+  workroom.style.border = "0px solid white";
+});
+workroom.addEventListener("mouseleave", () => {
+  workroom.style.backgroundColor = "transparent";
+  workroom.style.border = "1px solid white";
+});
+
+joinNow.addEventListener("mouseover", () => {
+  joinNow.style.backgroundColor = "rgb(53, 57, 146)";
+});
+joinNow.addEventListener("mouseleave", () => {
+  joinNow.style.backgroundColor = "#3643ba";
+});
+
+memberKnow.addEventListener("mouseover", () => {
+  memberKnow.style.backgroundColor = "rgb(223, 225, 242)";
+});
+memberKnow.addEventListener("mouseleave", () => {
+  memberKnow.style.backgroundColor = "#ecedf8";
+});
+
+//燃值专区模块
+const specialPlaceSelect = document.querySelectorAll(".special_place_menu li");
+const specialPlaceImg = document.querySelectorAll(".special_place_menu li img");
+
+specialPlaceSelect.forEach((select, s) => {
+  select.addEventListener("mouseover", () => {
+    specialPlaceImg[s].src = "resources/img/member/erweima2.png";
+    specialPlaceImg[s].style.width = "55%";
+    select.style.boxShadow = "0 12px 24px rgba(0, 0, 0, 0.15)";
+  });
+  select.addEventListener("mouseleave", () => {
+    specialPlaceImg[s].src = `resources/img/member/part2_${s + 1}.png`;
+    specialPlaceImg[s].style.width = "35%";
+    select.style.boxShadow = "none";
+  });
+});
+
+//回到顶部按钮
+const backTop = document.querySelector(".back_to_top");
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 600) {
+    backTop.classList.remove("hidden");
+    backTop.clientHeight;
+    backTop.style.bottom = "10%";
+  } else {
+    backTop.classList.add("hidden");
+    backTop.clientHeight;
+    backTop.style.bottom = "7%";
+  }
+});
+
+backTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // 平滑滚动
+  });
 });

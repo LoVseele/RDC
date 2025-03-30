@@ -309,7 +309,7 @@
   width: 100%;
   display: flex;
   transform: translateX(-100%);
-  transition: all 0.3s;
+  transition: all 0.5s;
 }
 
 .big_carousel_img {
@@ -391,17 +391,18 @@
   position: absolute;
   display: flex;
   justify-content: left;
-  gap: 13.8%;
+  gap: 11%;
   top: 58.5%;
+  left: -97.5%;
   height: 65px;
-  width: 600%;
-  margin-left: 6%;
+  width: 800%;
+  transition: all 0.5s;
 }
 
 .check {
-  height: 5vw;
-  width: 17vw;
-  line-height: 5vw;
+  height: 4.5vw;
+  width: 16vw;
+  line-height: 4.5vw;
   text-align: center;
   font-size: 1.5vw;
   color: white;
@@ -415,7 +416,8 @@
   transition: all 0.3s;
 }
 
-.check:nth-child(6) {
+.check:nth-child(7),
+.check:nth-child(1) {
   background-color: white;
   color: rgb(59, 68, 184);
 }
@@ -451,11 +453,12 @@
   height: 5vw;
   width: 20vw;
   color: black;
-  font-size: 1vw;
+  font-size: 1.1vw;
   line-height: 5vw;
   text-align: center;
   overflow: visible;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .hs_menu li img {
@@ -484,7 +487,6 @@
 .hs_menu li:nth-child(12):hover {
   background-color: rgb(59, 68, 184);
   color: white;
-  transition: all 0.3s;
 }
 
 /*关于迪卡侬模块*/
@@ -796,10 +798,6 @@
   cursor: pointer;
 }
 
-.ls_carousel_product div:hover {
-  background-color: rgb(53, 57, 146);
-}
-
 .ls_carousel_product .icon-gouwuche {
   font-size: 1.6vw;
   font-weight: bold;
@@ -1027,6 +1025,7 @@
 
 .recommend_menu li img {
   width: 100%;
+  cursor: pointer;
 }
 
 .recommend_menu li p {
@@ -1035,6 +1034,7 @@
   font-size: 1.1vw;
   font-weight: 500;
   letter-spacing: 1px;
+  cursor: pointer;
 }
 
 .recommend_menu li h3 {
@@ -1085,6 +1085,22 @@
   color: black;
   font-size: 0.7vw;
   font-weight: 600;
+}
+
+.recommend_menu .icon-gouwuche {
+  position: absolute;
+  right: 3%;
+  bottom: 2%;
+  color: white;
+  font-size: 1.8vw;
+  font-weight: 600;
+  width: 20%;
+  height: 3vw;
+  text-align: center;
+  line-height: 3vw;
+  background-color: #3643ba;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
 /*产品召回模块*/
@@ -1200,9 +1216,266 @@
   background-color: #3643ba;
 }
 
+/*会员福利模块*/
+.member_benefit {
+  position: relative;
+  margin-top: 13vw;
+  height: 30vw;
+}
+
+.member_benefit_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1%;
+}
+
+.member_benefit_imgbox {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  color: white;
+  z-index: 0;
+}
+
+.member_benefit_imgbox img {
+  width: 100%;
+}
+
+.member_benefit_textbox {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.gradient_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.45));
+  opacity: 0;
+  transition: opacity 0.45s ease-out;
+  z-index: 1;
+}
+
+.member_benefit_textbox h3 {
+  margin-top: 46%;
+  font-size: 2vw;
+  font-weight: 500;
+  margin-bottom: 5%;
+  transition: all 0.45s;
+}
+
+.member_benefit_textbox p {
+  font-size: 1.1vw;
+  margin-bottom: 10%;
+}
+
+.member_benefit_textbox img {
+  width: 30%;
+}
+
+.workroom {
+  margin-top: 5%;
+  padding: 3% 15%;
+  background-color: transparent;
+  border: 1px solid white;
+  font-size: 1.2vw;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.member_benefit_bottom {
+  position: absolute;
+  left: 50%;
+  top: 85%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 14%;
+  display: flex;
+  justify-content: center;
+  gap: 7%;
+}
+
+.member_benefit_bottom div {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2vw;
+  color: white;
+  background-color: #3643ba;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.member_benefit_bottom div:nth-child(2) {
+  background-color: #ecedf8;
+  color: #3643ba;
+}
+
+/*燃值专区模块*/
+.special_place {
+  position: relative;
+  margin-top: 8vw;
+  height: 30vw;
+  border-bottom: 1px solid #949494;
+}
+
+.special_place h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.6vw;
+}
+
+.special_place_menu {
+  position: absolute;
+  top: 12%;
+  width: 100%;
+  height: 70%;
+  margin: 1% auto;
+  display: flex;
+  gap: 2%;
+}
+
+.special_place_menu li {
+  padding: 4% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  box-shadow: none;
+  background-color: white;
+}
+
+.special_place_menu li img {
+  width: 35%;
+  margin-bottom: 15%;
+}
+
+.special_place_menu li h3 {
+  font-size: 1.5vw;
+  font-weight: 500;
+  margin-bottom: 5%;
+}
+
+.special_place_menu li p {
+  font-size: 1vw;
+}
+
+.special_place span {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -3%;
+  display: block;
+  width: 20%;
+  text-align: center;
+  font-size: 1.3vw;
+  background-color: white;
+  color: #656565;
+}
+
+/*燃值攻略模块*/
+.strategy {
+  position: relative;
+  margin-top: 3%;
+  height: 50vw;
+}
+
+.strategy h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.6vw;
+  margin-bottom: 1%;
+}
+
+.strategy h2 {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.6vw;
+  font-weight: 500;
+  margin-bottom: 5%;
+}
+
+.strategy_body {
+  position: absolute;
+  top: 25%;
+  display: flex;
+  gap: 4%;
+  height: 67%;
+  width: 100%;
+}
+
+.strategy_body img {
+  height: 100%;
+}
+
+.strategy_text {
+  width: 50%;
+  height: 100%;
+}
+
+.strategy_text h3 {
+  font-size: 1.35vw;
+  color: #616161;
+  font-weight: 500;
+  margin-bottom: 6%;
+}
+
+.strategy_text ul {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4%;
+}
+
+.strategy_text ul li {
+  position: relative;
+  height: 50%;
+  width: 100%;
+}
+
+.strategy_text span {
+  display: block;
+  position: absolute;
+  top: -15%;
+  left: 3%;
+  font-size: 3.3vw;
+}
+
+.strategy_text h4 {
+  position: absolute;
+  left: 10%;
+  font-size: 1.3vw;
+  font-weight: normal;
+}
+
+.strategy_text p {
+  position: absolute;
+  left: 10%;
+  bottom: 0;
+  font-size: 0.9vw;
+  color: #616161;
+}
+
 /*底部模块*/
 .footer {
-  margin-top: 10vw;
+  margin-top: 5vw;
   height: 30vw;
   background-color: #3643ba;
 }
@@ -1222,6 +1495,7 @@
   position: absolute;
   bottom: 7%;
   color: #aaafb9;
+  font-size: 0.8vw;
 }
 
 .footer_menubox {
@@ -1256,7 +1530,6 @@
   right: 10%;
   width: 8%;
   height: 45%;
-  font-size: 0.8vw;
 }
 
 .wechat_xcx {
@@ -1278,8 +1551,9 @@
 .wechat_gzh p,
 .wechat_xcx p {
   position: absolute;
-  bottom: 0;
+  bottom: -10%;
   left: 4%;
+  font-size: 0.8vw;
   color: white;
 }
 
@@ -1303,6 +1577,21 @@
 
 .filing span {
   margin-right: 2%;
+  font-size: 0.8vw;
+}
+
+/*返回顶部按钮*/
+.back_to_top {
+  position: fixed;
+  bottom: 7%;
+  right: 1%;
+  width: 4vw;
+  height: 4vw;
+  line-height: 4vw;
+  text-align: center;
+  background-color: rgb(247, 248, 249);
+  border: 1px solid #d9dde1;
+  transition: all 0.3s;
 }
 
 /*80%*/
@@ -1564,6 +1853,12 @@
     font-size: 15px;
   }
 
+  .recommend_menu .icon-gouwuche {
+    font-size: 30px;
+    height: 57px;
+    line-height: 57px;
+  }
+
   .product_return {
     margin-top: -160px;
     height: 180px;
@@ -1583,22 +1878,135 @@
     font-size: 16px;
   }
 
+  .member_header {
+    height: 560px;
+  }
+
+  .member_header h1 {
+    font-size: 50px;
+  }
+
+  .member_header p {
+    font-size: 20px;
+  }
+
+  .member_header_joinBox div {
+    font-size: 26px;
+  }
+
+  /*会员福利模块*/
+  .member_benefit {
+    margin-top: 200px;
+    height: 500px;
+  }
+
+  .member_benefit_textbox h3 {
+    font-size: 32px;
+    font-weight: 500;
+    transition: all 0.45s;
+  }
+
+  .member_benefit_textbox p {
+    font-size: 20px;
+    margin-bottom: 10%;
+  }
+
+  .workroom {
+    font-size: 25px;
+  }
+
+  /*燃值专区模块*/
+  .special_place {
+    margin-top: 120px;
+    height: 620px;
+  }
+
+  .special_place h1 {
+    font-size: 50px;
+  }
+
+  .special_place_menu li h3 {
+    font-size: 30px;
+  }
+
+  .special_place_menu li p {
+    font-size: 18px;
+  }
+
+  .special_place span {
+    font-size: 25px;
+  }
+
+  /*燃值攻略模块*/
+  .strategy {
+    height: 900px;
+  }
+
+  .strategy h1 {
+    font-size: 50px;
+  }
+
+  .strategy h2 {
+    font-size: 30px;
+  }
+
+  .strategy_text h3 {
+    font-size: 25px;
+  }
+
+  .strategy_text span {
+    font-size: 60px;
+  }
+
+  .strategy_text h4 {
+    font-size: 23px;
+    font-weight: normal;
+  }
+
+  .strategy_text p {
+    font-size: 17px;
+  }
+
+  /*底部模块*/
   .footer {
     margin-top: 150px;
     height: 540px;
     background-color: #3643ba;
   }
+
+  .footer p {
+    font-size: 15px;
+  }
+
   .wechat_gzh,
   .wechat_xcx,
   .footer_menu li {
     font-size: 14px;
   }
+
   .wechat_xcx {
     right: 0;
   }
 
+  .wechat_gzh p,
+  .wechat_xcx p {
+    font-size: 15px;
+    color: white;
+  }
+
   .media {
     font-size: 30px;
+  }
+
+  .filing span {
+    font-size: 15px;
+  }
+
+  /*返回顶部按钮*/
+  .back_to_top {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
   }
 }
 
