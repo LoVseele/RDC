@@ -1210,6 +1210,12 @@
   text-align: center;
   background-color: #3643ba;
   color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.member_header_joinBox div:nth-child(2):hover {
+  background-color: rgb(53, 57, 146);
 }
 
 /*加入迪卡侬浮块*/
@@ -1225,6 +1231,11 @@
   color: white;
   font-size: 1vw;
   background-color: #3643ba;
+  cursor: pointer;
+}
+
+.join_decathlon:hover {
+  background-color: rgb(53, 57, 146);
 }
 
 /*会员福利模块*/
@@ -1528,10 +1539,15 @@
   font-size: 0.8vw;
   cursor: pointer;
   color: #cfcfdb;
+  transition: color 0.3s;
 }
 
 .footer_menu li:nth-child(1) {
   margin-bottom: 10%;
+  color: white;
+}
+
+.footer_menu li:hover {
   color: white;
 }
 
@@ -1589,6 +1605,7 @@
 .filing span {
   margin-right: 2%;
   font-size: 0.8vw;
+  cursor: pointer;
 }
 
 /*返回顶部按钮*/
@@ -1603,6 +1620,7 @@
   background-color: rgb(247, 248, 249);
   border: 1px solid #d9dde1;
   transition: all 0.3s;
+  cursor: pointer;
 }
 
 /*80%*/
