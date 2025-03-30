@@ -151,6 +151,7 @@
 
 .nav_func .icon-gouwuche {
   font-size: 20px;
+  cursor: pointer;
 }
 
 .nav_position {
@@ -459,6 +460,7 @@
   overflow: visible;
   cursor: pointer;
   transition: background-color 0.3s;
+  cursor: pointer;
 }
 
 .hs_menu li img {
@@ -468,6 +470,7 @@
   width: 8vw;
   transition: all 0.3s;
   z-index: 1;
+  cursor: pointer;
 }
 
 .hs_menu li span {
@@ -477,6 +480,7 @@
   padding-left: 6vw;
   background-color: rgb(247, 248, 249);
   clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+  cursor: pointer;
 }
 
 .hs_menu li:nth-child(12) {
@@ -514,6 +518,7 @@
 
 .about_img img {
   height: 100%;
+  cursor: pointer;
 }
 
 /*当季品类模块*/
@@ -856,6 +861,7 @@
   justify-content: center;
   align-items: center;
   background-color: white;
+  cursor: pointer;
 }
 
 .fan_hot li:hover {
@@ -958,10 +964,12 @@
   height: 100%;
   padding: 1.5% 2.5%;
   transition: all 0.3s;
+  cursor: pointer;
 }
 
 .service li img {
   width: 37%;
+  cursor: pointer;
 }
 
 .service h3 {
@@ -970,6 +978,7 @@
   font-size: 1.2vw;
   font-weight: 500;
   letter-spacing: 1px;
+  cursor: pointer;
 }
 
 .service li:nth-child(n + 3) h3 {
@@ -979,6 +988,7 @@
 .service span {
   font-size: 1.5vw;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .service li:nth-child(1) span,
@@ -994,6 +1004,7 @@
   justify-content: center;
   align-items: center;
   color: #6a7888;
+  cursor: pointer;
 }
 
 .recommend {

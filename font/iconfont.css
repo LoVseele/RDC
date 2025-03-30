@@ -18,94 +18,108 @@
   font-family: "iconfont";
   font-size: 18px;
   margin-right: 3px;
+  cursor: pointer;
 }
 
 .icon-weixiu1:before {
   content: "\e62f";
   font-family: "iconfont";
+  cursor: pointer;
 }
 
 .icon-weibo:before {
   content: "\e699";
   font-family: "iconfont";
+  cursor: pointer;
 }
 
 .icon-zuojiantou:before {
   content: "\e607";
   font-size: 3vh;
   font-family: "iconfont";
+  cursor: pointer;
 }
 
 .icon-youjiantou:before {
   content: "\e612";
   font-size: 3vh;
   font-family: "iconfont";
+  cursor: pointer;
 }
 
 .icon-gouwudai:before {
   content: "\e600";
   font-family: "iconfont";
+  cursor: pointer;
 }
 
 .icon-youhuiquan:before {
   content: "\e606";
   font-family: "iconfont";
+  cursor: pointer;
 }
 
 .icon-dianpu:before {
   content: "\e895";
   font-size: 20px;
   font-family: "iconfont";
+  cursor: pointer;
 }
 
 .icon-youjiantou1:after {
   content: "\e79c";
   font-size: 1.5vw;
   font-family: "iconfont";
+  cursor: pointer;
 }
 
 .icon-jiangbei-:before {
   content: "\e604";
   font-family: "iconfont";
+  cursor: pointer;
 }
 
 .icon-duoxunhuan:before {
   content: "\e620";
   font-family: "iconfont";
+  cursor: pointer;
 }
 
 .icon-xiaohongshu:before {
   content: "\e6ac";
   font-family: "iconfont";
+  cursor: pointer;
 }
 
 .icon-yonghu:before {
   content: "\e60c";
   font-size: 20px;
   font-family: "iconfont";
+  cursor: pointer;
 }
 
 .icon-huoche:before {
   content: "\e65f";
   font-family: "iconfont";
+  cursor: pointer;
 }
 
 .icon-gouwuche:before {
   content: "\e655";
-  /* font-size: 1.9vw;
-   color: white;
-  font-weight: bold; */
   font-family: "iconfont";
+  cursor: pointer;
 }
 
 .icon-lihe:before {
   content: "\e601";
   font-family: "iconfont";
+  cursor: pointer;
 }
 
 .icon-duanlianchangpao:before {
   content: "\e605";
   font-family: "iconfont";
+  cursor: pointer;
 }
 
 .icon-hot::after {
@@ -114,27 +128,32 @@
   content: "\e602";
   font-family: "iconfont";
   font-size: 20px;
+  cursor: pointer;
 }
 
 .icon-douyin:before {
   content: "\e603";
   font-family: "iconfont";
+  cursor: pointer;
 }
 
 .icon-quan:before {
   content: "\e640";
   font-family: "iconfont";
+  cursor: pointer;
 }
 
 .icon-police:before {
   content: "\e902";
   font-family: "iconfont";
+  cursor: pointer;
 }
 
 .icon-Gc_17_public-TopOutlined:before {
   content: "\e61b";
   font-size: 2.2vw;
   font-family: "iconfont";
+  cursor: pointer;
 }
 
 /*80%*/
