@@ -1644,8 +1644,13 @@
   }
 
   .big_carousel {
-    height: 720px;
+    height: 700px;
   }
+
+  .checkbox {
+    left: -93%;
+  }
+
   .check {
     height: 75px;
     width: 250px;
@@ -1941,6 +1946,10 @@
   }
 
   .workroom {
+    font-size: 25px;
+  }
+
+  .member_benefit_bottom div {
     font-size: 25px;
   }
 

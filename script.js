@@ -152,7 +152,14 @@ let timeID_Big = setInterval(() => {
 //大轮播图切换图片函数
 function MoveBigImg(i) {
   bigCarouselContainer.style.transform = `translateX(-${i}00%)`;
-  let move = 6 - i * 103.5;
+
+  const zoomLevel = Math.round((window.outerWidth / window.innerWidth) * 100);
+  let move;
+  if (zoomLevel <= 80) {
+    move = 9 - i * 102;
+  } else {
+    move = 6 - i * 103.5;
+  }
   checkBox.style.left = `${move}%`;
 }
 
@@ -457,6 +464,7 @@ navMenu[4].addEventListener("click", () => {
   memberBenefit.classList.remove("hidden");
   specialPlace.classList.remove("hidden");
   strategy.classList.remove("hidden");
+  backTop.click();
 });
 
 logo.addEventListener("click", () => {
@@ -476,6 +484,7 @@ logo.addEventListener("click", () => {
   memberBenefit.classList.add("hidden");
   specialPlace.classList.add("hidden");
   strategy.classList.add("hidden");
+  backTop.click();
 });
 
 //会员福利模块
